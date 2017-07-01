@@ -1,0 +1,6 @@
+{
+        "extends": "../.eslintrc",
+        "rules": {
+                "react/no-set-state": 0
+        }
+}

@@ -1,0 +1,88 @@
+:local(.styles)
+    height: 4.5rem
+    //width: 4.5rem
+    min-width: 4.5rem
+    color: #00BCD4
+    cursor: pointer
+    font-size: 1.5rem
+    letter-spacing: 3px
+    font-weight: 600
+    text-transform: uppercase
+    border: none
+    position: relative
+    padding: 0.5rem
+    background-color: transparent
+    background-position: center
+    background-repeat: no-repeat
+
+    .stuff
+        height: 36px
+        min-width: 200px
+        background-position: 1rem 50%
+
+    &:focus
+        outline: none
+
+    &:active
+        outline: none
+        background-color: rgba(0, 188, 212, 0.30)
+
+    >*
+        pointer-events: none
+
+    span
+        height: 100%
+        padding-left: 2rem
+        min-width: 20rem
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &.Icon-archive
+        background-image: url("../assets/svg/archive.svg")
+        background-position: center
+
+    &.Icon-archiveActive
+        background-image: url("../assets/svg/archiveActive.svg")
+        background-position: center
+
+    &.Icon-add
+        background-image: url("../assets/svg/add.svg")
+
+    &.Icon-back
+        background-image: url("../assets/svg/backArrow.svg")
+
+    &.Icon-close
+        background-image: url("../assets/svg/close.svg")
+
+    &.Icon-edit
+        background-image: url("../assets/svg/edit.svg")
+
+    &.Icon-export
+        background-image: url("../assets/svg/export.svg")
+
+    &.Icon-filter
+        background-image: url("../assets/svg/filter.svg")
+        background-size: 2rem auto
+
+    &.Icon-filterActive
+        background-image: url("../assets/svg/filter--active.svg")
+        background-size: 2rem auto
+
+    &.Icon-import
+        background-image: url("../assets/svg/import.svg")
+
+    &.Icon-refresh
+        background-image: url("../assets/svg/refresh.svg")
+
+    &.Icon-stored
+        background-image: url("../assets/svg/stored.svg")
+        background-position: center
+
+    &.Icon-storedActive
+        background-image: url("../assets/svg/storedActive.svg")
+        background-position: center
+
+    &.Icon-trash
+        background-image: url("../assets/svg/trash.svg")
+

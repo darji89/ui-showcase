@@ -1,0 +1,71 @@
+:local(.styles)
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+  z-index: 2
+
+  //Force hardware acceleration for IOS
+  //transform: translateZ(0)
+  //perspective: 1000px
+  //backface-visibility: hidden
+
+  .view--Inner
+    z-index: 1
+    flex: 1
+    height: 100%
+    position: relative
+    overflow-x : hidden
+    overflow-y : scroll
+    //background-color: #cfcfcf
+
+
+  &.viewTransition-appear
+    pointer-events: none
+    transform: translateX(102%)
+    transition: transform .35s cubic-bezier(.1,.08,0,.99)
+
+    &.viewTransition-appear-active
+      transform: none
+
+  &.viewTransition-enter
+    pointer-events: none
+    transform: translateX(102%)
+    transition: transform .35s cubic-bezier(.1,.08,0,.99)
+
+    &.viewTransition-enter-active
+      transform: none
+
+
+  &.viewTransition-leave
+    pointer-events: none
+    transform: none
+
+
+    &.viewTransition-leave-active
+      transform: translateX(-102%)
+      transition: transform .35s cubic-bezier(.1,.08,0,.99)
+
+
+
+  &.viewTransitionBack-enter
+    pointer-events: none
+    //position: absolute
+    transform: translateX(102%)
+    transition: transform .35s cubic-bezier(.1,.08,0,.99)
+
+    &.viewTransitionBack-enter-active
+      transform: none
+
+  &.viewTransitionBack-leave
+    pointer-events: none
+    transform: none
+
+
+    &.viewTransitionBack-leave-active
+      transform: translateX(102%)
+      transition: all .35s cubic-bezier(.1,.08,0,.99)

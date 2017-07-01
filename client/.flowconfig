@@ -1,0 +1,34 @@
+[ignore]
+.*/node_modules/.*
+[include]
+./node_modules/
+./components/*.js
+./containers/*.js
+
+[libs]
+.flow/libs
+./node_modules/flow-interfaces/interfaces/
+./interfaces
+
+[options]
+module.name_mapper='.*\.\(svg\|png\|jpg\|gif\|mp3\)$' -> '<PROJECT_ROOT>/flow/stub/url-loader.js'
+module.system=haste
+suppress_type=$FlowIssue
+suppress_type=$FlowFixMe
+suppress_type=$FixMe
+
+module.name_mapper='.*\.\(scss\|css\|sass\)$' -> 'CSSModule'
+module.name_mapper='.*\.\(jpg\|jpeg\|gif\|svg\|png\)$' -> 'Image'
+
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+esproposal.decorators=ignore
+
+munge_underscores=true
+module.system.node.resolve_dirname=assets
+module.system.node.resolve_dirname=components
+module.system.node.resolve_dirname=containers
+module.system.node.resolve_dirname=i18n
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=store
+module.system.node.resolve_dirname=wheel

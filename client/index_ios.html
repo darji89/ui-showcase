@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src gap://ready 'unsafe-inline' data: 'unsafe-eval' *;"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes" />
+
+
+    <style>
+      html, body, #app {
+        font-size: 8px;
+      }
+
+      @media (max-width: 320px){
+        html, body, #app {
+          font-size: 6px;
+        }
+      }
+
+      *, :after, :before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+        overflow: hidden;
+        color: #ffffff;
+      }
+
+      html{
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: subpixel-antialiased;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow: hidden;
+        -ms-content-zooming: none;
+      }
+
+      body{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background-color: #191B2E;
+      }
+
+      div{
+        flex-direction: column
+      }
+
+      @font-face {
+        font-family: 'Shablagoo';
+        font-style: normal;
+        font-weight: 100;
+        src: url(assets/fonts/shablagoo.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Shablagoo';
+        font-style: normal;
+        font-weight: 400;
+        src: url(assets/fonts/shablagoocond.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Shablagoo';
+        font-style: normal;
+        font-weight: 500;
+        src: url(assets/fonts/shablagooexpand.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Shablagoo';
+        font-style: normal;
+        font-weight: 600;
+        src: url(assets/fonts/shablagoooverlap.ttf) format('truetype');
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Proxima Nova Light'), local('ProximaNova-Light'), url(assets/fonts/ProximaNova-Light.ttf) format('truetype');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Proxima Nova'), local('ProximaNova-Regular'), url(assets/fonts/ProximaNova-Regular.ttf) format('truetype');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Proxima Nova Bold'), local('ProximaNova-Bold'), url(assets/fonts/ProximaNova-Bold.ttf) format('truetype');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+      }
+
+      @font-face {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 800;
+        src: local('Proxima Nova Black'), local('ProximaNova-Black'), url(assets/fonts/ProximaNova-Black.ttf) format('truetype');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="app">
+    </div>
+
+    <script>
+      var timeoutId;
+      function hideStatusBar(){
+        StatusBar.hide();
+      }
+
+      if(navigator.userAgent.search('Android') > -1 || navigator.userAgent.search('iPhone|iPad') > -1){
+        document.write('<script type="text/javascript" src="cordova.js"><\/script>');
+        document.addEventListener('deviceready', hideStatusBar, false);
+      }
+    </script>
+
+    <script>
+        document.write('<script type="text/javascript" src="app.js"><\/script>');
+        document.write('<style>:root{ --SplashScreenDelay : 1.5s}<\/style>');
+    </script>
+  </body>
+</html>

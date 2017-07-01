@@ -1,0 +1,24 @@
+node_modules
+node_modules/*
+build/*
+.eslintcache
+coverage
+plugins
+npm-debug.log
+# Bower
+bower_components/
+
+#Stuff
+.idea
+dist
+.tmp
+.sass-cache
+.DS_Store
+localenv.json
+hooks/
+www
+tempdir/
+npm-debug.log/
+platforms/
+target/
+connection-pool.ticketmonster.properties

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="35403" id="com.appseven.galaxywheel" version="0.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>GalaxyWheel</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-statusbar" spec="2.1.3" />
+    <plugin name="cordova-plugin-splashscreen" spec="3.2.2" />
+    <plugin name="cordova-plugin-inappbrowser" spec="1.6.1" />
+    <plugin name="cordova-plugin-crosswalk-webview" spec="~1.8.0" />
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarStyle" value="blackopaque" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="SplashScreenDelay" value="1750" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="250" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <access allows-arbitrary-loads-in-web-content="true" origin="*" />
+    <allow-navigation href="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <config-file parent="/manifest" target="AndroidManifest.xml">
+        <uses-permission android:name="com.android.vending.BILLING" />
+    </config-file>
+    <plugin name="cc.fovea.cordova.purchase" spec="5.0.2">
+        <variable name="BILLING_KEY" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgjGRdII+kh3SVTa7YlpuY5kqLLBzlsHRq+pcg51mVPJ8KGBa9fRdI2EAbwKBe1jaFb/8kq6paH/e8zuE1jRTrcFcsTb9Gwf2Xg+7ZBGd1Tribh/p+Hzd3ilrQHLgACMe8KvRzqx5GAYBzKB43yMDtP+5NHv47TEMeQvEf2SFCsbumWD9eb3ZBIlp5dAAxT1jf0qkyauKTbhQ4cgUQFU+hdyaRYzRikh+XskOt4j/O/I1waXQuRlJbFPZRWWo6LKiPmrJyBYpyrJQdFFUpyrsSpLZNeKAZQHbP8ooaT78OIIYDXWaYVVEDMp8Q9MtAKqKhIUzDnF2aBC+ca3Ga9jRnwIDAQAB" />
+    </plugin>
+    <platform name="android">
+        <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+        <preference name="xwalkMode" value="embedded" />
+        <preference name="xwalkMultipleApk" value="true" />
+        <preference name="xwalkVersion" value="18" />
+        <preference name="SplashMaintainAspectRatio" value="true" />
+        <preference name="SplashShowOnlyFirstTime" value="true" />
+        <icon density="ldpi" src="resources/icon/android/ldpi.png" />
+        <icon density="mdpi" src="resources/icon/android/mdpi.png" />
+        <icon density="hdpi" src="resources/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="resources/icon/android/xhdpi.png" />
+        <icon density="xxhdpi" src="resources/icon/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="resources/icon/android/xxxhdpi.png" />
+        <splash density="port-hdpi" src="resources/screen/android/splash-port-hdpi.png" />
+        <splash density="port-ldpi" src="resources/screen/android/splash-port-ldpi.png" />
+        <splash density="port-mdpi" src="resources/screen/android/splash-port-mdpi.png" />
+        <splash density="port-xhdpi" src="resources/screen/android/splash-port-xhdpi.png" />
+        <splash density="port-xxhdpi" src="resources/screen/android/splash-port-xxhdpi.png" />
+        <splash density="port-xxxhdpi" src="resources/screen/android/splash-port-xxxhdpi.png" />
+    </platform>
+    <platform name="ios">
+        <plugin name="cordova-plugin-wkwebview-engine" spec="1.0.3" />
+        <plugin name="cc.fovea.cordova.purchase" spec="5.0.2" />
+        <feature name="CDVWKWebViewEngine">
+            <param name="ios-package" value="CDVWKWebViewEngine" />
+        </feature>
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <icon height="180" src="resources/icon/ios/icon-60@3x.png" width="180" />
+        <icon height="60" src="resources/icon/ios/icon-60.png" width="60" />
+        <icon height="120" src="resources/icon/ios/icon-60@2x.png" width="120" />
+        <icon height="76" src="resources/icon/ios/icon-76.png" width="76" />
+        <icon height="152" src="resources/icon/ios/icon-76@2x.png" width="152" />
+        <icon height="29" src="resources/icon/ios/icon-small.png" width="29" />
+        <icon height="58" src="resources/icon/ios/icon-small@2x.png" width="58" />
+        <icon height="50" src="resources/icon/ios/icon-50.png" width="50" />
+        <icon height="80" src="resources/icon/ios/icon-80.png" width="80" />
+        <icon height="40" src="resources/icon/ios/icon-40.png" width="40" />
+        <icon height="44" src="resources/icon/ios/icon-44.png" width="44" />
+        <icon height="72" src="resources/icon/ios/icon-72.png" width="72" />
+        <icon height="144" src="resources/icon/ios/icon-144.png" width="144" />
+        <icon height="167" src="resources/icon/ios/icon-167.png" width="167" />
+        <icon height="100" src="resources/icon/ios/icon-50@2x.png" width="100" />
+        <splash height="480" src="resources/screen/ios/Default-568h@2x.png" width="320" />
+        <splash height="960" src="resources/screen/ios/Default-iphone@2x.png" width="640" />
+        <splash height="1024" src="resources/screen/ios/Default-Portrait-ipad.png" width="768" />
+        <splash height="2048" src="resources/screen/ios/Default-Portrait-ipad@2x.png" width="1536" />
+        <splash height="768" src="resources/screen/ios/Default-Landscape-ipad.png" width="1024" />
+        <splash height="1536" src="resources/screen/ios/Default-Landscape-ipad@2x.png" width="2048" />
+        <splash height="1136" src="resources/screen/ios/Default-568h@2x.png" width="640" />
+        <splash height="1334" src="resources/screen/ios/Default-667h.png" width="750" />
+        <splash height="2208" src="resources/screen/ios/Default-736h.png" width="1242" />
+    </platform>
+    <preference name="android-minSdkVersion" value="16" />
+    <engine name="android" spec="~5.2.2" />
+    <engine name="ios" spec="~4.2.1" />
+    <preference name="xwalkVersion" value="19+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
+</widget>

@@ -1,0 +1,83 @@
+Deployment voor test en acceptatie
+==================================
+Name: GalaxyWheel_#v##
+iOS: 
+  com.appseven.galaxy-wheel
+  provisioning profile galaxy-wheel-dev
+  Developer Geoffrey 88V9G68M76
+  archive voor developer deployment (geoffs account is niet enterprise)
+  
+
+Android Compile
+===============
+Cordova gebruikt gradle voor compile en packaging
+android app heeft versionCode, versionName in AndroidManifest.xml
+De versionCode is een integer
+cordova config.xml:
+ version attribute mapt op versionName
+ android-versionCode attribute mapt op versionCode
+Als versionCode ontbreekt wordt version / versionName gebruikt voor constructie van integer (bijv 0.0.3 wordt 3)
+Gebruik voor checken inhoud/versie info APK het took aapt uit de android SDK:
+  > aapt dump badging stash/GalaxyWheel.apk
+
+Bij deployen voor multi-arch (APK per architectuur, als APK groter wordt dan max van 100MB, bijv bij crosswalk) zal versieCode
+met factor 10 worden vermenigvuldigd (zodat laatste digit kan worden gebruikt voor de architecturen)
+Forceren van versieCode kan via config.xml of door plaatsen gradle.properties (zie source root) in folder platforms/android
+
+
+
+Inapp purchase
+==============
+
+Store iOS:
+- let op dat je de juist app id gebruikt
+  JUISTE appid met test store items is com.appseven.galaxy-wheel
+  en niet com.appseven.galaxywheel
+  en niet com.appseven.galaxy-wheel-dev
+
+
+Store Android:
+- testen kan alleen met voor release gecompileerde en gesignde app
+  als app ook in alpha test store is aangemeld kan je zonder account afschrijving aankopen doen
+
+
+Backend sync
+============
++: geen sync issues met backend
+
+wheel/achievenments.js
++ datasource/achievementslist --> retrievalStore.data
++ datasource/achieve(name) --> retrievalStore.data
+
+wheel/play.js
++ datasource/wheelspin(spinData) --> fakeStore.spinResult
+
+wheel/settings.js
+- datasource/wheelfaces --> backendResult.faces
+
+store/BalanceActions.js
+- datasource/getplayerresources --> backendResult.resources
+- datasource/preparetransaction(type) --> localState.transaction
+- datasource/canceltransaction --> localState.transaction
+- datasource/checktransaction --> localState.tr
+
+store/HighScoreActions.js
+- datasource/gethighscores --> backendResult.highscores
+
+store/LoginActions.js
+- session/fb_login --> state.facebookURL
+- session/mail_login(email, username) --> state.last
+- session/refresh_token --> state.user
+- session/poll_token --> state.devnull
+- session/resession --> state.session
+- session/anon --> state.user
+- session/anonuser --> state.user
+
+store/performAction.js
+- datasource/agreementaccepted --> local.result
+
+store/shopActions.js
+- datasource/getstoreitems --> resultContainer.data
+- datasource/processpurchase(data) --> localState.validation
+
+

@@ -1,0 +1,52 @@
+:local(.styles)
+    //display: flex
+    height: 4.5rem
+    color: #00BCD4
+    min-width: 25rem
+    //justify-content: center
+    //align-items: center
+    cursor: pointer
+    font-size: 1.5rem
+    letter-spacing: 3px
+    font-weight: 600
+    text-transform: uppercase
+    border: none
+    background-color: rgba(0, 188, 212, 0.1)
+    position: relative
+
+    //Force hardware acceleration for IOS
+    transform: translateZ(0)
+    //perspective: 1000px
+    backface-visibility: hidden
+
+    &:focus
+        outline: none
+
+    &:not(.secondary)
+        &:active
+            outline: none
+            background-color: rgba(0, 188, 212, 0.30)
+
+    >*
+        pointer-events: none
+
+    &.secondary
+        color: #FF4081
+        background-color: rgba(255, 64, 129, 0.1)
+
+        &:active
+            background-color: rgba(255, 64, 129, 0.3)
+
+    span
+        height: 100%
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+    &.disabled
+        color: #bfbfbf
+        pointer-events: none
+        background-color: transparent
+        border: 1px solid #bfbfbf
