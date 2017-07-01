@@ -1,13 +1,13 @@
 /* @flow */
 'use strict';
 import React from 'react';
+import CityInfo from 'CityInfo';
 
 import 'style-loader!Application.sass';
 const defaultStyles = (require('Application.sass'):any).locals.styles;
 
 import Router from 'routerActions';
 
-import renderApplication from './../app.js';
 
 
 class Application extends React.Component {
@@ -26,7 +26,7 @@ class Application extends React.Component {
 
     return (
         <div className={defaultStyles}>
-          Application view
+          <CityInfo/>
 
         </div>
     );

@@ -2,7 +2,7 @@
 'use strict';
 import React from 'react';
 
-import 'style!IconButton.sass';
+import 'style-loader!IconButton.sass';
 const defaultStyles = (require('IconButton.sass'):any).locals.styles;
 
 type Props ={

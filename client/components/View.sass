@@ -1,11 +1,13 @@
 :local(.styles)
-  position: absolute
+  display: flex
+  flex-direction: column
   top: 0
   left: 0
   right: 0
   bottom: 0
   width: 100%
   height: 100%
+  position: absolute
   overflow: hidden
   z-index: 2
 
@@ -14,14 +16,13 @@
   //perspective: 1000px
   //backface-visibility: hidden
 
-  .view--Inner
+  .View--Inner
     z-index: 1
     flex: 1
-    height: 100%
     position: relative
     overflow-x : hidden
     overflow-y : scroll
-    //background-color: #cfcfcf
+    background-color: #cfcfcf
 
 
   &.viewTransition-appear

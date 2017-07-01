@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-import 'style!View.sass';
+import 'style-loader!View.sass';
 const defaultStyles = (require('View.sass'):any).locals.styles;
 
 import NavBar from 'NavBar';
@@ -78,7 +78,7 @@ function View (props: Props) {
       }}>
         {navBar}
         <div
-          className="view--Inner"
+          className="View--Inner"
           style={innerStyle}>
           {content}
         </div>

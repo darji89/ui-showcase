@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch Beta 3.5.1 (25233) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup" fill="#D0D2DC">
+            <path d="M14,12.4222945 C14,13.8459552 12.9229417,15 11.5941415,15 L2.40585846,15 C1.07710845,15 0,13.846009 0,12.4222945 L0,2.57770549 C0,1.15404476 1.07705828,0 2.40585846,0 L6.72246696,0 L6.72246696,1.58590308 L2.40585846,1.58590308 C1.89455246,1.58590308 1.48017621,2.02989832 1.48017621,2.57770549 L1.48017621,12.4222945 C1.48017621,12.9701224 1.89457176,13.4140969 2.40585846,13.4140969 L11.5941415,13.4140969 C12.1054475,13.4140969 12.5198238,12.9701017 12.5198238,12.4222945 L12.5198238,7.73127753 L14,7.73127753 L14,12.4222945 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M11.8820538,3.73344375 L7.90373046,7.67615868 C7.46816359,8.10782696 6.76214998,8.10800518 6.32659108,7.67634479 C5.89112792,7.24477929 5.8910821,6.54511879 6.32677888,6.11332176 L10.3051022,2.17060683 L8.11489166,8.8817842e-16 L14,3.0693326e-15 L14,5.83243307 L11.8820538,3.73344375 L11.8820538,3.73344375 Z" id="Rectangle-2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

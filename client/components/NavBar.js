@@ -2,7 +2,7 @@
 'use strict';
 import React from 'react';
 
-import 'style!NavBar.sass';
+import 'style-loader!NavBar.sass';
 const defaultStyles = (require('NavBar.sass'):any).locals.styles;
 
 type Props ={
