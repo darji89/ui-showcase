@@ -3,17 +3,45 @@
 :local(.styles)
   height: 100%
   width: 100%
-  background-color: #2c3651
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  position: relative
 
-  .NavBar
-    background-color: transparent
-    color: #516089
+  .TilesView
+    height: 100%
+    width: 100%
+    background-color: #2c3651
 
-  .NavBar--title
-    letter-spacing: 1px
-    text-transform: uppercase
+    .NavBar
+      background-color: transparent
+      color: #516089
 
-  .View--Inner
-    padding: 4rem $standardSidePadding 2rem
-    color: #79acf8
-    background-color: transparent
+    .NavBar--title
+      letter-spacing: 1px
+      text-transform: uppercase
+
+    .View--Inner
+      padding: 0
+      color: #79acf8
+      background-color: transparent
+
+  .tilesList
+    height: 100%
+    padding: 4rem $standardSidePadding
+    overflow-y: scroll
+
+    &.tileSelected
+      div[class*="-Tile"]:not(.selected)
+        transform: translateY(-100vh)
+
+
+  div[class*="-Tile"]
+    transition: transform 0.25s ease-out
+
+    &.selected
+      & ~ div[class*="-Tile"]:not(.selected)
+        transform: translateY(100vh)
+
+
