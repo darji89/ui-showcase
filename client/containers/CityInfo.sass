@@ -27,21 +27,27 @@
       color: #79acf8
       background-color: transparent
 
-  .tilesList
-    height: 100%
-    padding: 4rem $standardSidePadding
-    overflow-y: scroll
+    .tilesList
+      height: 100%
+      padding: 4rem $standardSidePadding
+      overflow-y: scroll
 
-    &.tileSelected
-      div[class*="-Tile"]:not(.selected)
-        transform: translateY(-100vh)
+      &.tileSelected
+        div[class*="-Tile"]:not(.selected)
+          transform: translateY(-100vh)
 
 
-  div[class*="-Tile"]
-    transition: transform 0.25s ease-out
+    div[class*="-Tile"]
+      transition: transform 0.3s ease-out
 
-    &.selected
-      & ~ div[class*="-Tile"]:not(.selected)
-        transform: translateY(100vh)
+      &.selected
+        & ~ div[class*="-Tile"]:not(.selected)
+          transform: translateY(100vh)
+
+
+  .DetailView
+    .View--Inner
+      background: transparent
+
 
 

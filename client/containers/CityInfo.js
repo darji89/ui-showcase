@@ -18,37 +18,37 @@ const collection = [
     id: 10,
     name: 'New York',
     caption: 'The world that never sleeps',
-    thumbnail: '',
+    thumbnail: '../assets/jpg/newYork2.jpg'
   },
   {
     id: 1,
-    name: 'Sweden',
+    name: 'Stockholm',
     caption: '-',
-    thumbnail: '',
+    thumbnail: '../assets/jpg/stockholm2.jpg'
   },
   {
     id: 2,
     name: 'Amsterdam',
     caption: 'Where drugs are legal',
-    thumbnail: '',
+    thumbnail: '../assets/jpg/amsterdam2.jpg'
   },
   {
     id: 30,
     name: 'New York',
     caption: 'The world that never sleeps',
-    thumbnail: '',
+    thumbnail: '../assets/jpg/newYork2.jpg'
   },
   {
     id: 4,
     name: 'Sweden',
     caption: '-',
-    thumbnail: '',
+    thumbnail: '../assets/jpg/stockholm2.jpg'
   },
   {
     id: 5,
     name: 'Amsterdam',
     caption: 'Where drugs are legal',
-    thumbnail: '',
+    thumbnail: '../assets/jpg/amsterdam2.jpg'
   }
 ];
 
@@ -99,6 +99,7 @@ class CityInfo extends React.Component {
                 className = {state.selected === tile.id ? 'selected' : ''}
                 key = {tile.id}
                 onClick = {() =>this.handleTileClick(tile.id)}
+                thumbnail = {tile.thumbnail}
                 title = {tile.name}
               />
             })}
