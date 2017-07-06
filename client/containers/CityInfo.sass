@@ -33,7 +33,7 @@
       overflow-y: scroll
 
       &.tileSelected
-        div[class*="-Tile"]:not(.selected)
+        div[class*="-Tile"]
           transform: translateY(-100vh)
 
 
@@ -46,8 +46,52 @@
 
 
   .DetailView
+    &.viewTransition_pop-appear, &.viewTransition_pop-enter
+      .detailView__hero
+        transition: transform 0.15s ease-out, opacity 0.15s ease-out
+        transform: scale(0.2)
+
+    &.viewTransition_pop-appear-active, &.viewTransition_pop-enter-active
+      .detailView__hero
+        transform: none
+
+    &.viewTransition_pop-leave
+      .NavBar--title
+        opacity: 1
+        transition: opacity 0.15s
+
+      .detailView__hero
+        transition: transform 0.15s ease-out, opacity 0.15s ease-out
+        transform: none
+
+      &.viewTransition_pop-leave-active
+        .NavBar--title
+          opacity: 0
+        .detailView__hero
+          transform: scale(0)
+
+
+    .NavBar
+      position: absolute
+      width: 100%
+      z-index: 2
+      background: transparent
+
+    .NavBar--title
+      letter-spacing: 1px
+      text-transform: uppercase
+
     .View--Inner
       background: transparent
+
+    .detailView__hero
+      width: 100%
+      height: 30%
+      background-size: 100% auto
+      background-repeat: no-repeat
+      transform-origin: center
+
+
 
 
 

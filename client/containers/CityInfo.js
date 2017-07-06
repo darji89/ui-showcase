@@ -91,7 +91,7 @@ class CityInfo extends React.Component {
           name = "TilesView"
           navLeft = {tilesViewNavLeft}
           navRight = {navRight}
-          navTitle = "Cities">
+          navTitle = {!state.selected ? 'Cities' : ''}>
           <div className={state.selected ? 'tilesList tileSelected' : 'tilesList'}>
             {collection.map(tile => {
               return <Tile
@@ -107,14 +107,19 @@ class CityInfo extends React.Component {
         </View>
 
         <View
+          transition
           className = "DetailView"
           hide = {!state.selected }
           name = "DetailView"
           navLeft = {detailViewNavLeft}
-          navTitle = "Details">
+          navTitle = {'Details'}
+          transitionName = "pop">
+          <div
+            className="detailView__hero"
+            style={state.selected ?{backgroundImage: 'url(' + collection.find(item => state.selected === item.id).thumbnail + ')'} : null}>
+
+          </div>
         </View>
-
-
 
       </div>
     );
